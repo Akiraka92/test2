@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="global.sesoc.classRegistration.mapper.LectureMapper">
+	
+	
+	<select id="getLectureList" parameterType="String" resultType="lecture">
+		select
+		lecture_id lectureId
+		,credit
+		,lecture_name subject
+		,major
+		from
+		class_subject
+		where major = #{major}
+		order by lecture_id
+	</select>
+	
+	<select id="getLecture" parameterType="lecture" resultType="lecture">
+		select
+		lecture_id lectureId
+		,credit
+		,lecture_name subject
+		,major
+		from
+		class_subject
+		where major = #{major}
+		and lecture_id = #{lectureId}
+	</select>
+	
+	
+	<insert id="addLecture" parameterType="lecture">
+		insert into
+		class_subject(
+		lecture_id
+		,credit
+		,lecture_name
+		,major
+		)
+		values(
+		lec_seq.nextval
+		,#{credit}
+		,#{subject}
+		,#{major}
+		)
+		
+	</insert>
+	
+	<insert id="insertClass" parameterType="regist">
+		insert into class_registration_list(
+			 class_no
+			,lecture_id
+			,professor_id
+			,schedule_day
+			,schedule_start
+			,schedule_end
+			,quota
+		) values(
+			 reg_seq.nextval
+			,#{lecture_id}
+			,#{professor_id}
+			,#{schedule_day}
+			,#{schedule_start}
+			,#{schedule_end}
+			,#{quota}
+		)
+	</insert>
+	
+<!-- 	
+	<select id="professorMy" parameterType="String" resultType="regist">
+		select
+			 r.class_no
+			,r.lecture_id
+			,r.schedule_day
+			,r.schedule_start
+			,r.schedule_end
+			,r.quota
+			,r.applicant
+			,s.lecture_name
+			,s.credit
+			,s.major lecture_major
+			,p.professor_name
+		from
+			 class_registration_list r
+			,class_subject s
+			,professors p
+		where
+			r.lecture_id = s.lecture_id
+			and r.professor_id = p.professor_id
+			and r.professor_id = #{id}
+		order by r.class_no
+			
+	</select>
+	
+	<select id="studentMy" parameterType="String" resultType="regist">
+		select
+			 r.class_no
+			,r.lecture_id
+			,s.lecture_name
+			,s.credit
+			,p.professor_name
+			,r.schedule_day
+			,r.schedule_start
+			,r.schedule_end
+			,r.quota
+			,r.applicant
+			,s.major lecture_major
+		from
+			 class_registration_list r
+			,class_subject s
+			,professors p
+			,class_application a
+		where
+			r.professor_id = p.professor_id and
+			r.lecture_id = s.lecture_id and
+			r.class_no = a.class_no and
+			a.student_id = #{id}
+	</select>
+ -->
+ 
+ 	<select id="myClass" parameterType="hashmap" resultType="regist">
+ 		select
+			 r.class_no
+			,r.lecture_id
+			,s.lecture_name
+			,s.credit
+			,p.professor_name
+			,r.schedule_day
+			,r.schedule_start
+			,r.schedule_end
+			,r.quota
+			,r.applicant
+			,s.major lecture_major
+		from
+			 class_registration_list r
+			,class_subject s
+			,professors p
+			<if test="job == 'student'">
+				,class_application a
+			</if>
+		<where>
+			<if test="job == 'student'">
+				r.professor_id = p.professor_id and
+				r.lecture_id = s.lecture_id and
+				r.class_no = a.class_no and
+				a.student_id = #{id}
+			</if>
+			<if test="job == 'professor'">
+				r.lecture_id = s.lecture_id
+				and r.professor_id = p.professor_id
+				and r.professor_id = #{id}
+			</if>
+
+		</where>
+		order by r.class_no
+ 	</select>
+ 	
+	
+	<select id="allClass" parameterType="hashmap" resultType="regist">
+		select
+			 r.class_no
+			,r.lecture_id
+			,r.professor_id
+			,r.schedule_day
+			,r.schedule_start
+			,r.schedule_end
+			,r.quota
+			,r.applicant
+			,s.lecture_name
+			,s.credit
+			,s.major lecture_major
+			,p.professor_name
+		from
+			 class_registration_list r
+			,class_subject s
+			,professors p
+		<where>
+			<if test="job == 'student'">
+				r.professor_id = p.professor_id and
+				s.lecture_id = r.lecture_id and
+				(s.major = #{major} or s.major = '교양')
+			</if>
+			<if test="job == 'professor'">
+				r.professor_id = p.professor_id and
+				r.lecture_id = s.lecture_id
+			</if>
+
+		</where>
+		order by r.class_no
+			
+	</select>
+	
+	<insert id="applyClass" parameterType="application" >
+		insert into
+			class_application(
+				 class_no
+				,student_id
+			)values(
+				 #{class_no}
+				,#{student_id}
+			)
+	</insert>
+	
+	<update id="classApplicant" parameterType="int">
+		update class_registration_list
+		set
+			applicant = (select count(*) from class_application
+								where class_no = #{class_no})
+			
+		where
+			class_no = #{class_no}
+			
+	</update>
+	
+	
+	<select id="getRegist" parameterType="int" resultType="regist">
+		select
+			 r.class_no
+			,r.lecture_id
+			,r.professor_id
+			,s.lecture_name
+			,s.credit
+			,s.major lecture_major
+			,p.professor_name
+			,r.schedule_day
+			,r.schedule_start
+			,r.schedule_end
+			,r.quota
+			,r.applicant
+		from
+			 class_registration_list r
+			,class_subject s
+			,professors p
+		where
+			r.professor_id = p.professor_id and
+			r.lecture_id = s.lecture_id and
+			r.class_no = #{class_no}
+	</select>
+	
+	<delete id="deleteClassStudent" parameterType ="application">
+		delete from 
+			class_application
+		where 
+			class_no = #{class_no} and
+			(student_id = #{student_id} or #{student_id} = 'drop_class')
+	</delete>
+	
+	<delete id="deleteClassProfessor" parameterType="int">
+		delete
+			from
+				class_registration_list
+			where
+				class_no = #{class_no}
+	</delete>
+	
+	<select id="searchClass" parameterType="String" resultType="regist">
+		select
+			 r.class_no
+			,r.lecture_id
+			,r.professor_id
+			,r.schedule_day
+			,r.schedule_start
+			,r.schedule_end
+			,r.quota
+			,r.applicant
+			,s.lecture_name
+			,s.credit
+			,s.major lecture_major
+			,p.professor_name
+		from
+			 class_registration_list r
+			,class_subject s
+			,professors p
+		where
+			r.professor_id = p.professor_id and
+			s.lecture_id = r.lecture_id and
+			(s.lecture_name like '%' || #{searchText} || '%')
+		order by r.class_no
+	</select>
+	
+</mapper>

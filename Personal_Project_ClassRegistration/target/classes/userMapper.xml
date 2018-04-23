@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="global.sesoc.classRegistration.mapper.UserMapper">
+	
+	
+	
+	<!-- 전공 교수 목록 -->
+	<select id="getProfessors" parameterType="String" resultType="user">
+		select professor_id id, professor_name name
+		 from professors
+		where major = #{major}
+	</select>
+	
+	
+	<!-- 로그인 -->
+	<!-- 회원가입 : ID 중복검사 -->
+	<select id="logInQuaryStudent" parameterType="user" resultType="user">
+
+		select
+			 student_id id
+			,student_name name
+			,major
+			,tutor
+			,grade
+		from
+			students
+		where
+			student_id = #{id} and
+			(student_pw = #{password} or
+				#{password} ='#signUp')
+
+	</select>
+
+	<select id="logInQuaryProfessor" parameterType="user" resultType="user">
+
+		select
+			 professor_id id
+			,professor_name name
+			,major
+		from
+			professors
+		where
+			professor_id = #{id} and
+			(professor_pw = #{password} or
+				#{password} ='#signUp')
+
+	</select>
+	
+	
+	<insert id="joinStudent" parameterType="user">
+		insert into students(
+			 student_id
+			,student_name
+			,student_pw
+			,major
+			,tutor
+			,grade
+		)values(
+			 #{id}
+			,#{name}
+			,#{password}
+			,#{major}
+			,#{tutor}
+			,${grade}
+		)
+	</insert>
+
+	<insert id="joinProfessor" parameterType="user">
+		insert into
+		professors(
+		professor_id
+		,professor_pw
+		,professor_name
+		,major
+		)values (
+		#{id}
+		,#{password}
+		,#{name}
+		,#{major}
+		)
+	</insert>
+	
+	
+	
+</mapper>

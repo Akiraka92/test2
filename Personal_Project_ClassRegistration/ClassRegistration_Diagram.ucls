@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="global.sesoc.classRegistration.controller.ClassController" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/controller/ClassController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="274" x="875" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="global.sesoc.classRegistration.controller.UserController" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/controller/UserController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="278" x="1325" y="356"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="global.sesoc.classRegistration.controller.MajorController" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/controller/MajorController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="178" x="1107" y="356"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="global.sesoc.classRegistration.dao.LectureDAO" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/dao/LectureDAO.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="281" x="552" y="356"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="global.sesoc.classRegistration.dao.MajorDAO" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/dao/MajorDAO.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="169" x="1117" y="711"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="global.sesoc.classRegistration.dao.UserDAO" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/dao/UserDAO.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="214" x="1368" y="711"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="7" language="java" name="global.sesoc.classRegistration.mapper.LectureMapper" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/mapper/LectureMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="281" x="326" y="711"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="8" language="java" name="global.sesoc.classRegistration.mapper.UserMapper" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/mapper/UserMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="214" x="1347" y="1030"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="9" language="java" name="global.sesoc.classRegistration.interceptor.LoginInterceptor" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/interceptor/LoginInterceptor.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="356" x="232" y="1030"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="10" language="java" name="global.sesoc.classRegistration.mapper.MajorMapper" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/mapper/MajorMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="171" x="1094" y="1030"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="11" language="java" name="global.sesoc.classRegistration.vo.Application" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/vo/Application.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="151" x="41" y="1030"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="global.sesoc.classRegistration.vo.User" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/vo/User.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="549" width="254" x="1582" y="1853"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="global.sesoc.classRegistration.vo.Lecture" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/vo/Lecture.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="158" x="875" y="1030"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="global.sesoc.classRegistration.vo.Regist" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/vo/Regist.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="783" width="207" x="628" y="1030"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="global.sesoc.classRegistration.vo.Major" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/vo/Major.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="151" x="1094" y="1853"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="global.sesoc.classRegistration.HomeController" 
+    project="Personal_Project_ClassRegistration" 
+    file="/Personal_Project_ClassRegistration/src/main/java/global/sesoc/classRegistration/HomeController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="311" x="282" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="17">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="18">    
+    <bendpoint x="274" y="356"/>    
+    <bendpoint x="274" y="711"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="19">    
+    <bendpoint x="1063" y="711"/>    
+    <bendpoint x="1063" y="1030"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="20">    
+    <bendpoint x="1591" y="1030"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="21">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="22">    
+    <bendpoint x="1633" y="356"/>    
+    <bendpoint x="1633" y="711"/>    
+    <bendpoint x="1633" y="1030"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="24">    
+    <bendpoint x="1612" y="711"/>    
+    <bendpoint x="1612" y="1030"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="25">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="26">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="27">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="28">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="29">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="30">    
+    <bendpoint x="863" y="356"/>    
+    <bendpoint x="863" y="711"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="31">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="32">    
+    <bendpoint x="637" y="711"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <association id="33">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="34" name="majorDAO">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="35" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="36">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="37" name="lectureDAO">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="38" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="39">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="40" name="majorDAO">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="41" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="42">    
+    <bendpoint x="723" y="711"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="43">    
+    <bendpoint x="1316" y="711"/>    
+    <bendpoint x="1316" y="1030"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="44">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="45">    
+    <bendpoint x="1295" y="1030"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <association id="46">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="47" name="userDAO">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="48" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="49">    
+    <bendpoint x="884" y="356"/>    
+    <bendpoint x="884" y="711"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="50">    
+    <bendpoint x="295" y="711"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

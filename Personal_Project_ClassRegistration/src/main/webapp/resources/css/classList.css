@@ -1,0 +1,32 @@
+
+div {
+	border: 1px solid black;
+	
+}
+
+
+#info_menu {
+	position: relative;
+	background-color: #5d98ef;
+	float: left;
+	width: 350px;
+	height: 900px;
+}
+
+.content {
+	/* background-color: black; */
+	height: 900px;
+	min-width: 1000px;
+}
+
+#classDiv {
+	/* background-color: red; */
+	height: 60%;
+	overflow: auto;
+}
+
+#myDiv{
+	/* background-color: teal; */
+	height: 40%;
+	overflow: auto;
+}
